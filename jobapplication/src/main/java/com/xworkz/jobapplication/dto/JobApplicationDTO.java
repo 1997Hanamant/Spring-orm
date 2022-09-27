@@ -13,7 +13,7 @@ public class JobApplicationDTO implements Serializable {
 	private Integer  yearOfPassout;
 	private String  university;
 	private String  adress;
-	private String  skill;
+	private String[]  skill;
 	private  Double salary;
 	private String  experince;
 	private String  idProof;
@@ -25,7 +25,7 @@ public class JobApplicationDTO implements Serializable {
 	
 	
 	public JobApplicationDTO(String name, String email, Long phoneNo, Long alternatePhoneNo, String gender,
-			String qualification, Integer yearOfPassout, String university, String adress, String skill, Double salary,
+			String qualification, Integer yearOfPassout, String university, String adress, String[] skill, Double salary,
 			String experince, String idProof, Long idProofNumber) {
 		super();
 		this.name = name;

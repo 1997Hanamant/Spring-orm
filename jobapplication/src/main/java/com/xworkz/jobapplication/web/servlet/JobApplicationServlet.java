@@ -35,7 +35,13 @@ public class JobApplicationServlet extends HttpServlet {
 		String yop = res.getParameter("ApplicantYop");
 		String university = res.getParameter("ApplicantUniversity");
 		String address = res.getParameter("ApplicantAdress");
-		String skill = res.getParameter("ApplicantSkill");
+		String names=" ";
+		String[] skill = res.getParameterValues("ApplicantSkill");
+		if(skill!=null) {
+		for (String string : skill) {
+			System.out.println(string);
+		}
+		}
 		
 		String salary = res.getParameter("ApplicantSalary");
 		String experince = res.getParameter("ApplicantExperince");
@@ -64,7 +70,7 @@ public class JobApplicationServlet extends HttpServlet {
 				.append(alternatPhoneNo).append("</br>").append("gender").append(gender).append("</br>")
 				.append("qualification").append(qualification).append("</br>").append("yop").append(yop).append("</br>")
 				.append("university").append(university).append("</br>").append("address").append(address)
-				.append("</br>").append("skill").append(skill).append("</br>").append("salary").append(salary)
+				.append("skill").append(names).append("</br>").append("salary").append(salary)
 				.append("</br>").append("experince").append(experince).append("</br>").append("idProof").append(idProof)
 				.append("</br>").append("idProofNumber").append(idProofNumber).append("</br>").append("</body>")
 				.append("</html>");
@@ -72,6 +78,8 @@ public class JobApplicationServlet extends HttpServlet {
 		JobApplicationDTO dtos = new JobApplicationDTO(name, email, Long.parseLong(phoneNo),
 				Long.parseLong(alternatPhoneNo), gender, qualification, Integer.parseInt(yop), university, address,
 				skill, Double.parseDouble(salary), experince, idProof, Long.parseLong(idProofNumber));
-		System.out.println(dto.add(dtos));
+		boolean add = dto.add(dtos);
+		System.out.println(add);
+	
 	}
 }
