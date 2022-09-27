@@ -27,7 +27,7 @@ public class JobApplicationServlet extends HttpServlet {
 		resp.setContentType("text/html");
 
 		String name = res.getParameter("ApplicantName");
-		String eamil = res.getParameter("ApplicantEmail");
+		String email = res.getParameter("ApplicantEmail");
 		String phoneNo = res.getParameter("ApplicantPhoneNo");
 		String alternatPhoneNo = res.getParameter("ApplicantAlternativePhoneNo");
 		String gender = res.getParameter("ApplicantGender");
@@ -36,13 +36,14 @@ public class JobApplicationServlet extends HttpServlet {
 		String university = res.getParameter("ApplicantUniversity");
 		String address = res.getParameter("ApplicantAdress");
 		String skill = res.getParameter("ApplicantSkill");
+		
 		String salary = res.getParameter("ApplicantSalary");
 		String experince = res.getParameter("ApplicantExperince");
 		String idProof = res.getParameter("ApplicantIdProof");
 		String idProofNumber = res.getParameter("ApplicantIdProofNumber");
 
 		System.out.println("name" + name);
-		System.out.println("Eamil" + eamil);
+		System.out.println("Eamil" + email);
 		System.out.println("phoneNo" + phoneNo);
 		System.out.println("alternatPhoneNo" + alternatPhoneNo);
 		System.out.println("gender" + gender);
@@ -58,7 +59,7 @@ public class JobApplicationServlet extends HttpServlet {
 
 		PrintWriter writer = resp.getWriter();
 		writer.append("<html>").append("<body>").append("<h1>").append("Job Application").append("</h1>")
-				.append("</br>").append("name").append(name).append("</br>").append("eamil").append(eamil)
+				.append("</br>").append("name").append(name).append("</br>").append("eamil").append(email)
 				.append("</br>").append("phoneNo").append(phoneNo).append("</br>").append("alternatPhoneNo")
 				.append(alternatPhoneNo).append("</br>").append("gender").append(gender).append("</br>")
 				.append("qualification").append(qualification).append("</br>").append("yop").append(yop).append("</br>")
@@ -68,9 +69,9 @@ public class JobApplicationServlet extends HttpServlet {
 				.append("</br>").append("idProofNumber").append(idProofNumber).append("</br>").append("</body>")
 				.append("</html>");
 
-		JobApplicationDTO dtos = new JobApplicationDTO(name, idProof, Long.parseLong(phoneNo),
+		JobApplicationDTO dtos = new JobApplicationDTO(name, email, Long.parseLong(phoneNo),
 				Long.parseLong(alternatPhoneNo), gender, qualification, Integer.parseInt(yop), university, address,
-				skill, Double.parseDouble(salary), experince, idProofNumber, Long.parseLong(idProof));
+				skill, Double.parseDouble(salary), experince, idProof, Long.parseLong(idProofNumber));
 		System.out.println(dto.add(dtos));
 	}
 }
