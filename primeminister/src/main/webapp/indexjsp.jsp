@@ -4,10 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>JSP</title>
+<style>
+.main{align-content: center}
+</style>
 </head>
-<body>
-	<form action="minister" method="post">
+<body style = "background-image: url('C:\Users\Hanamanth\Pictures\bck.jpg');">
+<a href="success">Show Success details</a>
+<h3>Prime Minister Details</h3>
+	<form action="minister" method="post" class="main" >
 		Prime Minister Name: <input type="text" id="name"
 			name="PrimeMinistername"> <br>
 		<br> Prime Minister Country: <select id="Country"
