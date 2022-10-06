@@ -8,8 +8,9 @@
 </head>
 <body>
 	<h1>Application Details</h1>
-	<form action="operation.do">
+	<form action="operation.do" method="Post">
 	<a href="even.do" >Display</a>
+	<a href="CommittedSuicide.jsp">Committed Suicide Details</a>
 	
 	<br><br>
 		Name <input type="text" id="name" name="ApplicantName"> 

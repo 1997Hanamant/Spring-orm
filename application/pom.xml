@@ -6,6 +6,7 @@
 	<properties>
 		<springmvc.version>5.3.18</springmvc.version>
 		<jstl.version>1.2</jstl.version>
+		<lombok.version>1.18.24</lombok.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -14,11 +15,18 @@
 			<version>${springmvc.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
-<dependency>
-    <groupId>jstl</groupId>
-    <artifactId>jstl</artifactId>
-    <version>${jstl.version}</version>
-</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 	<packaging>war</packaging>
