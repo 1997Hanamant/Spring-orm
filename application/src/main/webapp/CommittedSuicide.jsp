@@ -9,6 +9,7 @@
 <body>
 <h3>${name}</h3>
 <h3>${DTO}</h3>
+<h3>${type}</h3>
 	<form action="Create.do">
 		<br>
 		<br> Name:<input type="text" name="name" /> <br>
