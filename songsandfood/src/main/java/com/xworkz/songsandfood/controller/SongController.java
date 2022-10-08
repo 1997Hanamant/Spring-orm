@@ -25,7 +25,6 @@ public class SongController {
 		model.addAttribute("SongsDto", songDTO);
 		boolean add = songDTOs.add(songDTO);
 		System.out.println(add);
-
 		return "Song.jsp";
 
 	}

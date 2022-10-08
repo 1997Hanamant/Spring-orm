@@ -1,8 +1,9 @@
 package com.xworkz.songsandfood.configuration;
 
+import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class FrontControllerConfiguartion extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class FrontControllerConfiguartion extends AbstractAnnotationConfigDispatcherServletInitializer implements WebApplicationInitializer{
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
