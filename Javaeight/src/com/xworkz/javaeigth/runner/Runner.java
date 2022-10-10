@@ -1,6 +1,7 @@
 package com.xworkz.javaeigth.runner;
 
 import com.xworkz.javaeight.Monkey;
+import com.xworkz.javaeight.Weekend;
 
 public class Runner {
 
@@ -11,5 +12,14 @@ public class Runner {
 		};
 		monkey.shout("DP Nair",100);
 		
+		Weekend  weekend=()->{
+			System.out.println( "Calling ");
+			
+		};
+		weekend.function();
 	}
+		
+		
+		
+	
 }
