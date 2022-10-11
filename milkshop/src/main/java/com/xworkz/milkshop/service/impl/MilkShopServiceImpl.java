@@ -9,12 +9,12 @@ import com.xworkz.milkshop.service.MilkShopService;
 @Service
 public class MilkShopServiceImpl implements MilkShopService{
 	@Autowired
-	private MilkShopDAO shopDAO;
+	private MilkShopDAO shopDAO; 
 
 	@Override
 	public boolean validateAndSave(MilkShopDTO milkShopDTO) {
 		System.out.println("Created"+this.getClass().getSimpleName());
-		System.out.println("MilkShopDAO"+shopDAO);
+		System.out.println("MilkShopDAO"+shopDAO.toString());
 		return true;
 	}
 

@@ -21,9 +21,17 @@ public class MilkShopController {
 	public String onSave(MilkShopDTO milkShopDTO) {
 		System.out.println("Calling OnSave method");
 		System.out.println("MilkShopDTO"+milkShopDTO);
-		milkShopService.validateAndSave(milkShopDTO);
-		return "DisplaySuccess";
+		boolean validateAndSave = milkShopService.validateAndSave(milkShopDTO);
+		System.out.println(validateAndSave);
+		if(validateAndSave) {
+			System.out.println("Data validate and Saved");
+			return "DisplaySuccess";
+		}
+	else {
+		System.out.println("Data is not valid and not saved");
 	}
+		return"index";
 	
-
+	
+	}
 }
