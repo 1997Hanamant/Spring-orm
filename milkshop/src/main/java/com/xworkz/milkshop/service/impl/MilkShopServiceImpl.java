@@ -15,7 +15,7 @@ public class MilkShopServiceImpl implements MilkShopService{
 	public boolean validateAndSave(MilkShopDTO milkShopDTO) {
 		System.out.println("Created"+this.getClass().getSimpleName());
 		System.out.println("MilkShopDAO"+shopDAO.toString());
-		shopDAO.Save(milkShopDTO);
+		shopDAO.save(milkShopDTO);
 		return true;
 	}
 

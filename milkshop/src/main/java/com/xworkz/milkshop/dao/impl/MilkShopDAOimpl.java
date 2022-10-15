@@ -25,7 +25,7 @@ public class MilkShopDAOimpl implements MilkShopDAO {
 	
 
 	@Override
-	public boolean Save(MilkShopDTO milkShopDTO) {
+	public boolean save(MilkShopDTO milkShopDTO) {
 		try {
 			manager=factory.createEntityManager();
 			EntityTransaction transaction = manager.getTransaction();

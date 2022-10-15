@@ -26,8 +26,8 @@ public class DBConnectionCofiguration {
 		bean.setDataSource(source);
 
 		Map<String, Object> jpaProperties = new HashMap<String, Object>();
-		jpaProperties.put("Hibernate.show_sql", false);
-	//jpaProperties.put("MySQL8Dialect", "org.hibernate.dialect.MySQL8Dialect");
+		jpaProperties.put("hibernate.show_sql", true);
+		jpaProperties.put("hibernate.format_sql", true);
 		bean.setJpaPropertyMap(jpaProperties);
 		return bean;
 
