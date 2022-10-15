@@ -29,7 +29,9 @@ implements WebMvcConfigurer{
 	
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+		System.out.println("configureDefaultServletHandling");
 		configurer.enable();
 	}
 
 }
+

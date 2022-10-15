@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan("com.xworkz.milkshop")
+@ComponentScan("com.xworkz")
 public class SpringConfiguartion {
 
 	public SpringConfiguartion() {
