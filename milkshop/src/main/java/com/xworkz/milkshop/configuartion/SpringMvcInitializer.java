@@ -4,10 +4,12 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import com.xworkz.milkshop.dbconfiguration.DBConnectionCofiguration;
+
 public class SpringMvcInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
 implements WebMvcConfigurer{
 	private String[] servletMappings= {"/"};
-	private Class[] servletConfigClasses= {SpringConfiguartion.class};
+	private Class[] servletConfigClasses= {SpringConfiguartion.class,DBConnectionCofiguration.class};
 	
 
 	@Override
