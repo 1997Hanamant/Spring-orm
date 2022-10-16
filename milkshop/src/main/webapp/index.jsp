@@ -7,6 +7,7 @@
 <title>MilK Shop Details</title>
 </head>
 <body>
+<a href="Dress.jsp">click on Dress</a>
 	<form action="milk" method="Post">
 
 		Name:<input type="text" name="brandName"> <br>
