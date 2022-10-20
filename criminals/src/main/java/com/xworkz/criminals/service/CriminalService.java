@@ -9,5 +9,9 @@ public interface CriminalService {
 	boolean validateAndSave(CriminalsDTO criminalsDTO);
 	
 	List<CriminalsDTO> findAll();
+	
+	List<CriminalsDTO> validateFindByName(String name);
+	
+	List<CriminalsDTO> validateAndfindByGenderCountryAndCriminalType(String gender, String country, String criminlaType);
 
 }

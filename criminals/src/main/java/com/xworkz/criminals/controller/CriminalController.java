@@ -2,6 +2,8 @@ package com.xworkz.criminals.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -55,5 +57,44 @@ public class CriminalController {
 		return "ShowAll";
 
 	}
+	
+	@GetMapping("/findByName")
+	public String findByName(HttpServletRequest req,Model model) {
+		String name = req.getParameter("name");
+		List<CriminalsDTO> dtos = criminalService.validateFindByName(name);
+		System.out.println("CriminalDetails" +dtos);
+		System.out.println("Dtos are null"+dtos.isEmpty());
+		if(dtos!=null && !dtos.isEmpty()) {
+			System.out.println("dtos are found" + dtos.size());
+			model.addAttribute("CriminalDetails", dtos);
+			model.addAttribute("size", "Total Criminals found:" + dtos.size());
+		}
+		else {
+			System.out.println("dtos are not found");
+			model.addAttribute("msg", "Data is Empty");
+			
+		}
+		return "ShowAll";
+		
+	}
+	@GetMapping("/findByGenderCountryAndCriminalType")
+	public String findByAgeCountryAndCriminalType(HttpServletRequest req,Model model) {
+		String gender = req.getParameter("gender");
+		String  country = req.getParameter("country");
+		String criminalType  = req.getParameter("criminalType");
+		List<CriminalsDTO> dtos = criminalService.validateAndfindByGenderCountryAndCriminalType(gender, country, criminalType);
+		if(dtos!=null && !dtos.isEmpty()) {
+			System.out.println("CriminalDetails"+dtos.size());
+			model.addAttribute("CriminalDetails",dtos);
+			model.addAttribute("size","Criminals found:"+dtos.size());
+		}
+		else {
+			System.out.println("dtos are not found");
+			model.addAttribute("msg","Data is not found");
+		}
+		return "ShowAll";
+		
+	}
+	
 
 }

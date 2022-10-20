@@ -9,7 +9,14 @@
 </head>
 <body>
 <h2>${records}</h2>
+<br><br>
 <h1>Enter Criminal Details</h1>
+<br><br>
+<a href="FindByName.jsp">FindByName</a>
+<br><br>
+<a href="FindByAgeCountryAndCriminalType.jsp">FindByAgeCountryAndCriminalType</a>
+<br><br>
+<a href="findMarriedByAge.jsp">FindMarriedByAge</a>
 <form action="Criminal" method="post">
 <br><br>
 Name:<input type="text" name="name">
@@ -86,6 +93,7 @@ Net Worth:<input type="text" name="netWorth"/>
 </form>
 <br><br>
 <a href="Criminal">Click to Show All Details of Criminals</a>
+<a href="FindByName.jsp">FindByName</a>
 
 </body>
 </html>
