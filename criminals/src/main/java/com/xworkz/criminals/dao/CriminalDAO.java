@@ -13,4 +13,5 @@ public interface CriminalDAO {
 
 	List<CriminalsDTO> findByGenderCountryAndCriminalType(String gender, String country, String criminlaType);
 
+	List<Object[]> findAllWifeNameAndPrisonName();
 }

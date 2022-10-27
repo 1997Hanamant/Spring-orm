@@ -95,4 +95,23 @@ public class CriminalDAOImpl implements CriminalDAO {
 		return null;
 	}
 
+	@Override
+	public List<Object[]> findAllWifeNameAndPrisonName() {
+		try {
+			manager = factory.createEntityManager();
+			Query query = manager.createNamedQuery("findAllWifeNameAndPrisonName");
+			List<Object[]> resultList = query.getResultList();
+			if(resultList!=null) {
+				return resultList;
+			}
+		}
+		catch (PersistenceException e) {
+			e.printStackTrace();
+		}
+		finally {
+			
+		}
+		return findAllWifeNameAndPrisonName();
+	}
+
 }

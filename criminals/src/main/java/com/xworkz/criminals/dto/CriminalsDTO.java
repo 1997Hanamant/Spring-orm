@@ -29,7 +29,8 @@ import lombok.ToString;
 @NamedQueries({@NamedQuery(name ="findAll", query = "select info from CriminalsDTO info" ),
 	@NamedQuery(name = "findByName" ,query ="select info from CriminalsDTO info where info.name=:na"),
 	@NamedQuery(name = "findByAgeCountryAndCriminalType",query = "select info from CriminalsDTO info where info.gender=:gn and info.country=:co and info.criminalType=:cr "),
-@NamedQuery(name = "findMarriedByAge",query = "Select info.married from CriminalsDTO info where info.age=:ag")
+@NamedQuery(name = "findMarriedByAge",query = "Select info.married from CriminalsDTO info where info.age=:ag"),
+@NamedQuery(name = "findAllWifeNameAndPrisonName",query = "select info.wifeName,info.prisonName from CriminalsDTO info")
 })
 	
 public class CriminalsDTO implements Serializable{
@@ -68,4 +69,6 @@ public class CriminalsDTO implements Serializable{
 	private String prisonName;
 	@NotNull
 	private Double netWorth;	
+	@NotNull
+	private String fileName;
 }

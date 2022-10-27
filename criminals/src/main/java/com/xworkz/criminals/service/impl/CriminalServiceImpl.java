@@ -38,7 +38,8 @@ public class CriminalServiceImpl implements CriminalService {
 					&& netWorth != 0) {
 				return this.criminalDAO.save(criminalsDTO);
 
-			} else {
+			} 
+			else {
 				System.out.println("Data is Not valid");
 			}
 		}
@@ -81,10 +82,11 @@ public class CriminalServiceImpl implements CriminalService {
 		return null;
 	}
 
-	
+	@Override
+	public List<Object[]> validateFindAllWifeNameAndPrisonName() {
 
+	return this.criminalDAO.findAllWifeNameAndPrisonName();
 
-
-	
+}
 
 	}

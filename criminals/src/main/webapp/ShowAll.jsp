@@ -51,9 +51,8 @@
 			<th>${dto.netWorth}</th>
 			</tr>
 			</c:forEach>
-
 		</thead>
-
 	</table>
+	<img src="Criminal/image?fileName=IMG_20180130_104352.jpg "width="100" height="100"></img>
 </body>
 </html>

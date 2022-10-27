@@ -14,4 +14,5 @@ public interface CriminalService {
 	
 	List<CriminalsDTO> validateAndfindByGenderCountryAndCriminalType(String gender, String country, String criminlaType);
 
+	List<Object[]> validateFindAllWifeNameAndPrisonName();
 }

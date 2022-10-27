@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +16,11 @@
 <br><br>
 <a href="FindByAgeCountryAndCriminalType.jsp">FindByAgeCountryAndCriminalType</a>
 <br><br>
-<a href="findMarriedByAge.jsp">FindMarriedByAge</a>
-<form action="Criminal" method="post">
+<a href="findMarriedByAge.jsp">FindMarriedByAge></a>
+<br><br>
+<a href="findAllWifeNameAndPrisonName.jsp">findAllWifeNameAndPrisonName</a>
+<br><br>
+<form action="Criminal" method="post" enctype="multipart/form-data">
 <br><br>
 Name:<input type="text" name="name">
 <br><br>
@@ -45,7 +48,6 @@ Criminal Type:<select name=criminalType>
 <option>Rape</option>
 <option>Terirest</option>
 </select>
-
 <br><br>
 NoOfCases:<select name="noOfCases">
 <option>select</option>
@@ -54,8 +56,8 @@ NoOfCases:<select name="noOfCases">
 </c:forEach>
 </select>
 <br><br>
-Alive:<input type="radio" name="alive" value="Alive">Alive
-<input type="radio" name="alive" value="NotAlive">NotAlive
+Alive:<input type="radio" name="alive" value="Yes">Yes
+<input type="radio" name="alive" value="No">No
 <br><br>
 Gender:<input type="radio" name="gender" value="Male">Male
 <input type="radio" name="gender" value="Female">Female
@@ -88,12 +90,12 @@ Prison Name:<input type="text" name="prisonName"/>
 <br><br>
 Net Worth:<input type="text" name="netWorth"/>
 <br><br>
+Upload Image:<input type="file" name="image"/>
+<br><br>
 <input type="submit" value="Save Record">
-
 </form>
 <br><br>
 <a href="Criminal">Click to Show All Details of Criminals</a>
 <a href="FindByName.jsp">FindByName</a>
-
 </body>
 </html>
