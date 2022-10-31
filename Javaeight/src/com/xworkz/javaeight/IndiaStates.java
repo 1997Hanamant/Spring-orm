@@ -44,12 +44,16 @@ public class IndiaStates {
 		list.add("Jammu and Kashmir");
 		list.add("Puducherry");
 		
+	//	list.stream().forEach((ref)->System.out.println(ref));
 		list.stream().forEach((ref)->System.out.println(ref));
 		System.out.println("----------------------------");
+		//list.stream().forEach((ref)->System.out.println(ref.toUpperCase()));
 		list.stream().forEach((ref)->System.out.println(ref.toUpperCase()));
 		System.out.println("----------------------------");
+		//list.stream().forEach((ref)->System.out.println(ref.toLowerCase()));
 		list.stream().forEach((ref)->System.out.println(ref.toLowerCase()));
 		System.out.println("----------------------------");
+	//	list.stream().filter((ref)->ref.endsWith("a")).forEach((ref)->System.out.println(ref));
 		list.stream().filter((ref)->ref.endsWith("a")).forEach((ref)->System.out.println(ref));
 		System.out.println("----------------------------");
 		list.stream().filter((ref)->ref.startsWith("K")).forEach((ref)->System.out.println(ref));
@@ -61,11 +65,15 @@ public class IndiaStates {
 		list.stream().filter((ref)->ref.contains("h")).forEach((ref)->System.out.println());
 		list.stream().filter((ref)->ref.contains("r")).forEach((ref)->System.out.println(ref));
 		System.out.println("----------------------------");
-		list.stream().filter((ref)->ref.length()>10).forEach((ref)->System.out.println(ref));
+	//	list.stream().filter((ref)->ref.length()>10).forEach((ref)->System.out.println(ref));
+		list.stream().filter((ref)->ref.length()>6).forEach((ref)->System.out.println(ref));
 		System.out.println("----------------------------");
 		list.stream().filter((ref)->ref.length()<5).forEach((ref)->System.out.println(ref));
 		System.out.println("----------------------------");
-	    list.stream().forEach((ref)->System.out.println(new StringBuffer().append(ref).reverse()));
+	   // list.stream().forEach((ref)->System.out.println(new StringBuffer().append(ref).reverse()));
+		//list.stream().forEach((ref)->System.out.println(new StringBuffer().append(ref).reverse()));
+		list.stream().forEach((ref)->System.out.println(new StringBuffer().append(ref).reverse()));
+	    
 	    System.out.println("----------------------------");
 	 //   list.stream().filter(ref->Collections.frequency(list, ref).collect(Collectors.toSet()).forEach(System.out::println));
 	

@@ -19,7 +19,4 @@ public class Runner {
 		weekend.function();
 	}
 		
-		
-		
-	
 }

@@ -74,9 +74,11 @@ public class HouseRunner {
 
 		list.forEach((ref) -> System.out.println(ref));
 		System.out.println("");
-		list.stream().sorted((e1, e2) -> e1.getId().compareTo(e2.getId())).forEach((ref) -> System.out.println(ref));
+	//	list.stream().sorted((e1, e2) -> e1.getId().compareTo(e2.getId())).forEach((ref) -> System.out.println(ref));
+		list.stream().sorted((e1,e2)->e1.getId().compareTo(e2.getId())).forEach((ref)->System.out.println(ref));
 		System.out.println("*******************");
-		list.stream().sorted((e1,e2)->e2.getId().compareTo(e1.getId())).forEach((ref)->System.out.println(ref));
+	//	list.stream().sorted((e1,e2)->e2.getId().compareTo(e1.getId())).forEach((ref)->System.out.println(ref));
+		list.stream().sorted((e1,e2)->e1.getName().compareTo(e2.getName())).forEach((ref)->System.out.println(ref));
 		System.out.println("*******************");
 		list.stream().sorted((e1,e2)->e1.getName().compareTo(e2.getName())).forEach((ref)->System.out.println(ref));
 		System.out.println("*******************");
@@ -92,6 +94,7 @@ public class HouseRunner {
 		System.out.println("*******************");
 		list.stream().filter((ref)->ref.getType().getValue().equals("apartment")).sorted((e1,e2)->e1.getType().getValue().compareTo(e2.getType().getValue())).forEach((ref)->System.out.println(ref));
 		System.out.println("*******************");
+		//list.stream().filter((ref)->ref.getType().getValue().equals("villa")).sorted((e1,e2)->e1.getType().getValue().compareTo(e2.getType().getValue())).forEach((ref)->System.out.println(ref));
 		list.stream().filter((ref)->ref.getType().getValue().equals("villa")).sorted((e1,e2)->e1.getType().getValue().compareTo(e2.getType().getValue())).forEach((ref)->System.out.println(ref));
 		System.out.println("*******************");
 		list.stream().sorted((e1,e2)->{
@@ -101,6 +104,14 @@ public class HouseRunner {
 			
 		}
 		return m;
+		}).forEach((ref)->System.out.println(ref));
+		list.stream().sorted((e1,e2)->{
+			int m=e1.getType().getValue().compareTo(e2.getType().getValue());
+			if(m==0) {
+				return e1.getOwningType().getValue().compareTo(e2.getOwningType().getValue());
+			}
+			return m;
+			
 		}).forEach((ref)->System.out.println(ref));
 		
 		System.out.println("*******************");
